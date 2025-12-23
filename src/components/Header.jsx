@@ -5,6 +5,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { MdOutlineMenu, MdClose } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 
+import logo from "../assets/logo.jpg"
+
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [mobileDropdown, setMobileDropdown] = useState(null);
@@ -122,7 +124,7 @@ const Header = () => {
                 {/* Logo */}
                 <div className="text-2xl font-bold">
                     <Link to="/" className="text-black hover:text-black no-underline">
-                        MyLogo
+                        <img src={logo} alt="" />
                     </Link>
                 </div>
 
@@ -275,7 +277,7 @@ const Header = () => {
                                         className="text-black hover:text-black no-underline"
                                         onClick={() => setMenuOpen(false)}
                                     >
-                                        MyLogo
+                                        <img src={logo} alt="" />
                                     </Link>
                                 </div>
                                 <button
