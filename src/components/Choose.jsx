@@ -20,7 +20,7 @@ const Choose = () => {
     ];
 
     return (
-        <section className="py-12 md:py-20">
+        <section className="py-12 md:py-10 ">
             
         <div className="min-h-screen  border-t border-b border-gray-400 bg-white p-6 ">
             <div className="max-w-6xl mx-auto">

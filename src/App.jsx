@@ -3,6 +3,7 @@ import TopBar from './components/Topbar';
 import Header from './components/Header';
 import { Hero } from "./components/Hero";
 import Choose from "./components/Choose";
+import Our_Expertise from "./components/Our_Expertise"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <>
                 <Hero />
                 <Choose />
+                <Our_Expertise/>
               </>
             } />
             {/* Add other routes as needed */}
