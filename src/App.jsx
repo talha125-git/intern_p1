@@ -3,7 +3,8 @@ import TopBar from './components/Topbar';
 import Header from './components/Header';
 import { Hero } from "./components/Hero";
 import Choose from "./components/Choose";
-import Our_Expertise from "./components/Our_Expertise"
+import Our_Expertise from "./components/Our_Expertise";
+import Partners from "./components/Partners"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 <Hero />
                 <Choose />
                 <Our_Expertise/>
+                <Partners/>
               </>
             } />
             {/* Add other routes as needed */}
