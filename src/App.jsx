@@ -4,9 +4,10 @@ import Header from './components/Header';
 import { Hero } from "./components/Hero";
 import Choose from "./components/Choose";
 import Our_Expertise from "./components/Our_Expertise";
-import Partners from "./components/Partners"
-import Your_Tax from "./components/Your_Tax"
-import Top_Rated from "./components/Top_Rated"
+import Partners from "./components/Partners";
+import Your_Tax from "./components/Your_Tax";
+import Top_Rated from "./components/Top_Rated";
+import Parallax_Section from "./components/Parallax_Section"
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                 <Partners/>
                 <Your_Tax/>
                 <Top_Rated />
+                <Parallax_Section />
               </>
             } />
             {/* Add other routes as needed */}
