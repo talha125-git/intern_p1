@@ -6,6 +6,7 @@ import Choose from "./components/Choose";
 import Our_Expertise from "./components/Our_Expertise";
 import Partners from "./components/Partners"
 import Your_Tax from "./components/Your_Tax"
+import Top_Rated from "./components/Top_Rated"
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Our_Expertise/>
                 <Partners/>
                 <Your_Tax/>
+                <Top_Rated />
               </>
             } />
             {/* Add other routes as needed */}
