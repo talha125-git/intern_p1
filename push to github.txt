@@ -5,7 +5,7 @@
 
 🔹 2. Run the following commands in terminal:
 		git add .
-		git commit -m "Add Parallax Section"
+		git commit -m "Add UK's_Largest Section"
 		git push origin main
 
 🔹 3. Build the updated project
