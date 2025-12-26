@@ -1,24 +1,26 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TopBar from './components/Topbar';
 import Header from './components/Header';
-import C1_Hero from "./components/Hero";
-import C2_Choose from "./components/Choose";
-import C3_Our_Expertise from "./components/Our_Expertise";
-import C4_Partners from "./components/Partners";
-import C5_Your_Tax from "./components/Your_Tax";
-import C6_Top_Rated from "./components/Top_Rated";
-import C7_Parallax_Section from "./components/Parallax_Section";
+import { Hero } from "./components/Hero";
+import Choose from "./components/Choose";
+import Our_Expertise from "./components/Our_Expertise";
+import Partners from "./components/Partners";
+import Your_Tax from "./components/Your_Tax";
+import Top_Rated from "./components/Top_Rated";
+import Parallax_Section from "./components/Parallax_Section";
+import Our_Achievements from "./components/Our_Achievements";
 
 function HomePage() {
   return (
     <>
-      <C1_Hero />
-      <C2_Choose />
-      <C3_Our_Expertise />
-      <C4_Partners />
-      <C5_Your_Tax />
-      <C6_Top_Rated />
-      <C7_Parallax_Section />
+      <Hero />
+      <Choose />
+      <Our_Expertise/>
+      <Partners/>
+      <Your_Tax/>
+      <Top_Rated />
+      <Parallax_Section />
+      <Our_Achievements />
     </>
   );
 }
@@ -42,8 +44,6 @@ function App() {
     </Router>
   );
 }
-
-
 
 
 // function App() {
