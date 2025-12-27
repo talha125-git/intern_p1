@@ -9,7 +9,8 @@ import Your_Tax from "./components/Your_Tax";
 import Top_Rated from "./components/Top_Rated";
 import Parallax_Section from "./components/Parallax_Section";
 import Our_Achievements from "./components/Our_Achievements";
-import Uklargest from "./components/UK's_Largest"
+import Uklargest from "./components/UK's_Largest";
+import Contact from "./components/Contact_";
 
 function HomePage() {
   return (
@@ -23,6 +24,7 @@ function HomePage() {
       <Parallax_Section />
       <Our_Achievements />
       <Uklargest/>
+      <Contact />
     </>
   );
 }

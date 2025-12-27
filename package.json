@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ionic/react": "^8.7.15",
     "@tailwindcss/vite": "^4.1.18",
     "framer-motion": "^12.23.26",
     "ionicons": "^8.0.13",
