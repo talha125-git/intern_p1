@@ -62,4 +62,13 @@
   color: #888;
 }
 
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
 /* absolute flex md:flex-row flex-col items-center md:items-start bottom-6 right-6 md:right-6 lg:right-12 z-10 bg-white text-black p-3 md:p-4 rounded-3xl md:rounded-4xl max-w-[90%] md:max-w-none */

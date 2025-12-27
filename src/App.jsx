@@ -12,6 +12,7 @@ import Our_Achievements from "./components/Our_Achievements";
 import Uklargest from "./components/UK's_Largest";
 import Contact from "./components/Contact_";
 import Who__We_Help from "./components/Who_We_Help"
+import Parallax_2  from "./components/Parallax_2"
 
 function HomePage() {
   return (
@@ -27,6 +28,7 @@ function HomePage() {
       <Uklargest/>
       <Contact />
       <Who__We_Help />
+      <Parallax_2 />
     </>
   );
 }

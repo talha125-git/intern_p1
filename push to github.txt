@@ -5,7 +5,7 @@
 
 🔹 2. Run the following commands in terminal:
 		git add .
-		git commit -m "Add Who_We_Help Section"
+		git commit -m "Add Parallax_2 Section"
 		git push origin main
 
 🔹 3. Build the updated project
