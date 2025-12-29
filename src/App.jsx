@@ -14,6 +14,7 @@ import Contact from "./components/Contact_";
 import Who__We_Help from "./components/Who_We_Help";
 import Parallax_2  from "./components/Parallax_2";
 import Speak_to_the_Uk from "./components/Speak_To_the_UK's";
+import Google_Reviews from "./components/Google_Reviews";
 
 function HomePage() {
   return (
@@ -31,6 +32,7 @@ function HomePage() {
       <Who__We_Help />
       <Parallax_2 />
       <Speak_to_the_Uk />
+      <Google_Reviews />
     </>
   );
 }
