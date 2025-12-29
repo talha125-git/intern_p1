@@ -11,8 +11,9 @@ import Parallax_Section from "./components/Parallax_Section";
 import Our_Achievements from "./components/Our_Achievements";
 import Uklargest from "./components/UK's_Largest";
 import Contact from "./components/Contact_";
-import Who__We_Help from "./components/Who_We_Help"
-import Parallax_2  from "./components/Parallax_2"
+import Who__We_Help from "./components/Who_We_Help";
+import Parallax_2  from "./components/Parallax_2";
+import Speak_to_the_Uk from "./components/Speak_To_the_UK's";
 
 function HomePage() {
   return (
@@ -29,6 +30,7 @@ function HomePage() {
       <Contact />
       <Who__We_Help />
       <Parallax_2 />
+      <Speak_to_the_Uk />
     </>
   );
 }
