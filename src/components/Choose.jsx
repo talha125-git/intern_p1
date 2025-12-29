@@ -20,9 +20,9 @@ const Choose = () => {
     ];
 
     return (
-        <section className="py-12 md:py-10 ">
+        <section className="py-12 md:py-1 ">
             
-        <div className="min-h-screen  border-t border-b border-gray-400 bg-white p-6 ">
+        <div className="h-auto  border-t border-b border-gray-400 bg-white p-6 ">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
 
@@ -44,7 +44,7 @@ const Choose = () => {
                             </h2>
                         </div>
                         {features.map((feature, index) => (
-                            <div key={index} className="bg-white overflow-hidden">
+                            <div key={index} className="bg-white text-white overflow-hidden">
                                 <button
                                     onClick={() => toggleDropdown(`feature-${index}`)}
                                     className="w-full flex items-center bg-[#1D3C45]  justify-between  px-2 text-left"

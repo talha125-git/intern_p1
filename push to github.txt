@@ -5,9 +5,10 @@
 
 🔹 2. Run the following commands in terminal:
 		git add .
-		git commit -m "Add Google_Reviews Section"
+		git commit -m "Adjust Height in choose Section"
 		git push origin main
-
+		npm run build
+		npm run deploy
 🔹 3. Build the updated project
 		npm run build
 
