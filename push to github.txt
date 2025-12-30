@@ -5,7 +5,7 @@
 
 🔹 2. Run the following commands in terminal:
 		git add .
-		git commit -m "Add Softwares Section"
+		git commit -m "Add Dropdown to Services"
 		git push origin main
 
 		npm run build

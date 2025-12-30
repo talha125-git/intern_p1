@@ -5,6 +5,11 @@ import { IoIosArrowDown } from "react-icons/io";
 import { MdOutlineMenu, MdClose } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 
+import Servse_drpdn from "../components/header-componants/Servse_drpdn"
+import Who_we_Assist_drpdn from "../components/header-componants/Who_we_Assist_drpdn"
+import Pakages_drpdn from "../components/header-componants/Pakages_drpdn"
+import Contact_drpdn from "../components/header-componants/Contact_drpdn"
+
 import logo from "../assets/logo.jpg"
 
 const Header = () => {
@@ -38,7 +43,7 @@ const Header = () => {
             // Handle search logic here
             // For example: navigate to search results page
             // navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-            
+
             // Close search bar after submit
             setSearchOpen(false);
             setSearchQuery("");
@@ -46,45 +51,38 @@ const Header = () => {
     };
 
     const menuItems = [
-        { text: "Home", link: "/" },
+        {
+            text: "Home",
+            link: "/"
+        },
         {
             text: "Services",
             link: "/services",
-            dropdown: [
-                { text: "Service 1", link: "/service1" },
-                { text: "Service 2", link: "/service2" },
-                { text: "Service 3", link: "/service3" },
-            ],
+            dropdown: <Servse_drpdn />
         },
         {
             text: "Who We Assist",
             link: "/who-we-assist",
-            dropdown: [
-                { text: "Assist 1", link: "/assist1" },
-                { text: "Assist 2", link: "/assist2" },
-                { text: "Assist 3", link: "/assist3" },
-            ],
+            dropdown: <Who_we_Assist_drpdn />
         },
         {
             text: "Packages",
             link: "/packages",
-            dropdown: [
-                { text: "Package 1", link: "/package1" },
-                { text: "Package 2", link: "/package2" },
-                { text: "Package 3", link: "/package3" },
-            ],
+            dropdown: <Pakages_drpdn />
         },
-        { text: "Blog", link: "/blog" },
+        {
+            text: "Blog",
+            link: "/blog"
+        },
         {
             text: "Contact Us",
             link: "/contact",
-            dropdown: [
-                { text: "WhatsApp", link: "/whatsapp" },
-                { text: "Facebook", link: "/facebook" },
-                { text: "X", link: "/x" },
-            ],
+            dropdown: <Contact_drpdn />
         },
-        { text: "About Us", link: "/about" },
+        {
+            text: "About Us",
+            link: "/about"
+        },
     ];
 
     const sidebarVariants = {
@@ -98,19 +96,19 @@ const Header = () => {
     };
 
     const searchVariants = {
-        open: { 
+        open: {
             opacity: 1,
             scale: 1,
-            transition: { 
+            transition: {
                 type: "spring",
                 stiffness: 300,
                 damping: 20
             }
         },
-        closed: { 
+        closed: {
             opacity: 0,
             scale: 0.95,
-            transition: { 
+            transition: {
                 type: "spring",
                 stiffness: 300,
                 damping: 20
@@ -138,26 +136,37 @@ const Header = () => {
                                         to={item.link}
                                         className="flex items-center cursor-pointer py-3 relative hover:text-orange-500 font-bold transition-colors duration-300 no-underline text-black"
                                     >
-                                        {item.text} 
+                                        {item.text}
                                         {item.dropdown && <IoIosArrowDown className="ml-1" />}
                                         <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#eb7515] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                                     </Link>
                                 </div>
 
                                 {/* Dropdown on hover for desktop */}
+                                {/* Dropdown on hover for desktop */}
                                 {item.dropdown && (
-                                    <ul className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50">
-                                        {item.dropdown.map((drop, dIdx) => (
-                                            <li key={dIdx}>
-                                                <Link
-                                                    to={drop.link}
-                                                    className="block px-4 py-2.5 hover:bg-gray-50 text-sm no-underline text-black hover:text-orange-500"
-                                                >
-                                                    {drop.text}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50">
+                                        {Array.isArray(item.dropdown) ? (
+                                            // It's an array of link objects
+                                            <ul className="w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+                                                {item.dropdown.map((drop, dIdx) => (
+                                                    <li key={dIdx}>
+                                                        <Link
+                                                            to={drop.link}
+                                                            className="block px-4 py-2.5 hover:bg-gray-50 text-sm no-underline text-black hover:text-orange-500"
+                                                        >
+                                                            {drop.text}
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        ) : (
+                                            // It's a React component
+                                            <div className="bg-white border border-gray-200 rounded-md shadow-lg">
+                                                {item.dropdown}
+                                            </div>
+                                        )}
+                                    </div>
                                 )}
                             </li>
                         ))}
@@ -334,19 +343,29 @@ const Header = () => {
                                                 </div>
 
                                                 {mobileDropdown === idx && (
-                                                    <ul className="ml-4 mt-1 flex flex-col space-y-1 border-l border-gray-200 pl-4">
-                                                        {item.dropdown.map((drop, dIdx) => (
-                                                            <li key={dIdx}>
-                                                                <Link
-                                                                    to={drop.link}
-                                                                    className="block py-2.5 px-3 rounded-lg text-gray-700 hover:text-orange-500 transition-colors duration-300 no-underline"
-                                                                    onClick={() => setMenuOpen(false)}
-                                                                >
-                                                                    {drop.text}
-                                                                </Link>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
+                                                    <div className="ml-4 mt-1 border-l border-gray-200 pl-4">
+                                                        <div className="py-2" onClick={(e) => e.stopPropagation()}>
+                                                            {Array.isArray(item.dropdown) ? (
+                                                                // It's an array of link objects
+                                                                <ul className="space-y-1">
+                                                                    {item.dropdown.map((drop, dIdx) => (
+                                                                        <li key={dIdx}>
+                                                                            <Link
+                                                                                to={drop.link}
+                                                                                className="block py-2.5 px-3 rounded-lg text-gray-700 hover:text-orange-500 transition-colors duration-300 no-underline"
+                                                                                onClick={() => setMenuOpen(false)}
+                                                                            >
+                                                                                {drop.text}
+                                                                            </Link>
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            ) : (
+                                                                // It's a React component
+                                                                item.dropdown
+                                                            )}
+                                                        </div>
+                                                    </div>
                                                 )}
                                             </div>
                                         ) : (
